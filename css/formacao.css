@@ -116,7 +116,7 @@
 }
 
 .idiomas h3::before {
-  content: url("../Imagens/cursos.svg");
+  content: url("../imagens/cursos.svg");
   margin-right: 10px;
   margin-top: 10px;
 }
