@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  font-family: "Rubik", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+dd {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+  transition: 500ms;
+}
+
+.js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0px, 0);
+}

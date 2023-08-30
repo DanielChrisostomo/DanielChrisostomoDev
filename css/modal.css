@@ -1,0 +1,115 @@
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 3000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container.ativo {
+  display: flex;
+}
+
+.modal {
+  background: white;
+  padding: 4rem;
+  border: 10px solid #ff7724;
+  box-shadow: 0 0 0px 10px white;
+  position: relative;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ativo .modal {
+  animation: modal 300ms forwards;
+}
+
+.fechar {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #ff7724;
+  border-radius: 50%;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: #111;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.modal label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.modal textarea {
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.modal button[type="submit"] {
+  font-family: "Rubik", sans-serif;
+  display: block;
+  border: none;
+  background: linear-gradient(90deg, #ff1c1c, #ff7724);
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: white;
+  box-shadow: 1px 1px 4px 1px #111;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .modal {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 700px) {
+  .modal {
+    max-width: 300px;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  .modal textarea {
+    max-width: 275px;
+  }
+  .modal button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .modal {
+    max-width: 200px;
+  }
+  .modal textarea {
+    max-width: 200px;
+  }
+  .modal button[type="submit"] {
+    width: 100%;
+  }
+}
